@@ -45,4 +45,21 @@ glue_client.create_crawler(
 )
 
 
+glue_client.create_crawler(
+    Name='raw-stats-data-crawler',
+    Role='suhailmemon84-glue-s3-glue-access',
+    DatabaseName='suhailmemon84-dev',
+    Targets=
+    {
+        'S3Targets':
+        [
+            {
+                'Path':'s3://suhailmemon84-youtube-de-project/youtube/raw_statistics_data'
+            }
+        ]
+    }
+
+)
+
 glue_client.start_crawler(Name='raw-stats-reference-data-crawler')
+glue_client.start_crawler(Name='raw-stats-data-crawler')

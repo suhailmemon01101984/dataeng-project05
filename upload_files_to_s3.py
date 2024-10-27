@@ -10,7 +10,7 @@ def s3_upload_raw_stats_file(file, bucket):
 
 def s3_upload_region_data_file(file, bucket,region):
     filename = f'./datafiles/{file}'
-    bucket_file_name=f'youtube/raw_statistics/region={region}/{file}'
+    bucket_file_name=f'youtube/raw_statistics_data/region={region}/{file}'
     s3 = boto3.client('s3')
     s3.upload_file(filename, bucket, bucket_file_name)
 
