@@ -12,6 +12,12 @@
 # go under function configuration and add environment variables: env_clean_s3_path, env_glue_database, env_glue_table, env_glue_table_write_mode
 # with values: s3://suhailmemon84-youtube-de-project-cleaned/youtube, suhailmemon84-dev, cleaned_stats_reference_data and append
 #then deploy your function and click the test button
+#once testing is done and everything is working then go under your lamda function in console and go under configuration --> triggers and
+#create the trigger for S3 with event type as all object create events and prefix as youtube/raw_statistics_reference_data/ and then hit save
+#now delete every json file from the dir: youtube/raw_statistics_reference_data/ and then upload those json files again.
+#if you have coded everything right then below lambda function code should execute for every file and create a corresponding parquet file in
+#the bucket: suhailmemon84-youtube-de-project-cleaned and you should be able to query all this data in athena with a sql like: select * from  "suhailmemon84-dev"."cleaned_stats_reference_data"  ; and get proper data back
+
 
 import json
 import os
