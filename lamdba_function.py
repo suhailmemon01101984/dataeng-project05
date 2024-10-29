@@ -1,3 +1,8 @@
+#the whole reason we created the lambda function is because when we tried to do a crawler on the json files and query the resulting table
+#in glue, it failed with error (the json is badly formatted). hence we have to create this lambda function to conver the json into a proper
+#parquet file and then create a glue table on top of the parquet files so that we can query the resulting table in glue
+
+
 #create the lambda function using the aws console UI. python 3.12 as runtime, x86_64 as architecture, change the default execution role to
 #suhailmemon84-lambda-s3-glue-access.
 #once the function is created, go under configuration, then general configuration then click edit and update memory and ephemeral storage both to 512 mb
