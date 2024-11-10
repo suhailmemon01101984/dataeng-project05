@@ -17,7 +17,7 @@
 # go under function configuration and add environment variables: env_clean_s3_path, env_glue_database, env_glue_table, env_glue_table_write_mode
 # with values: s3://suhailmemon84-youtube-de-project-cleaned/youtube/cleaned_stats_reference_data/, suhailmemon84-dev, cleaned_stats_reference_data and append
 # once this table: cleaned_stats_reference_data is created...it creates the id column as string. you can go into glue and edit the schema to bigint
-# but your query(when you join this table to the raw_statistics_reference_data will not work because the parquet file header has not changed.
+# but your query(when you join this table to the raw_statistics_data will not work because the parquet file header has not changed.
 # so what you do is delete the one parquet file, do not drop the glue table and run the test lambda function again in append mode
 # and now your join query will work without the need to cast the id column  cleaned_stats_reference_data as bigint
 #then deploy your function and click the test button
@@ -58,3 +58,33 @@ def lambda_handler(event, context):
     }
 
 
+
+####below are all athena queries
+# SELECT etag FROM "suhailmemon84-dev"."raw_statistics_reference_data" limit 10;
+#
+# SELECT * FROM "suhailmemon84-dev"."raw_statistics_data" limit 10;
+#
+# SELECT * FROM "suhailmemon84-dev"."cleaned_stats_data" limit 10;
+#
+#
+# SELECT distinct region FROM "suhailmemon84-dev"."raw_statistics_data" limit 10;
+#
+#
+# select * from  "suhailmemon84-dev"."cleaned_stats_reference_data"  ;
+#
+#
+# DROP TABLE `suhailmemon84-dev.cleaned_stats_reference_data` ;
+#
+# DROP TABLE `suhailmemon84-dev.raw_statistics_reference_data` ;
+#
+# DROP TABLE `suhailmemon84-dev.raw_statistics_data` ;
+#
+# select rsd.title, rsd.channel_title, csrd.snippet_title from "suhailmemon84-dev"."raw_statistics_data" rsd
+# inner join  "suhailmemon84-dev"."cleaned_stats_reference_data" csrd
+# on rsd.category_id=csrd.id limit 10 ;
+#
+#
+# select title, channel_title from "suhailmemon84-dev"."raw_statistics_data" limit 10
+#
+#
+# select count(*) from "suhailmemon84-dev"."cleaned_stats_reference_data";
