@@ -60,7 +60,7 @@ def lambda_handler(event, context):
 
 
 ####below are all athena queries
-# SELECT etag FROM "suhailmemon84-dev"."raw_statistics_reference_data" limit 10;
+# SELECT etag FROM "suhailmemon84-dev"."raw_statistics_reference_data" limit 10; -- this query fails which is why we created this lambda function which created cleaned_stats_reference_data pointed to parquet files
 #
 # SELECT * FROM "suhailmemon84-dev"."raw_statistics_data" limit 10;
 #
@@ -81,10 +81,14 @@ def lambda_handler(event, context):
 #
 # select rsd.title, rsd.channel_title, csrd.snippet_title from "suhailmemon84-dev"."raw_statistics_data" rsd
 # inner join  "suhailmemon84-dev"."cleaned_stats_reference_data" csrd
-# on rsd.category_id=csrd.id limit 10 ;
+# on rsd.category_id=csrd.id limit 10 ; ----to make this query run...first create the table by running lambda function using a test event and then change the datatype to bigint for csrd.id then rerun the lambda function for real for all the actual data in append mode
 #
 #
 # select title, channel_title from "suhailmemon84-dev"."raw_statistics_data" limit 10
 #
 #
 # select count(*) from "suhailmemon84-dev"."cleaned_stats_reference_data";
+#
+# select csd.title, csd.channel_title, csrd.snippet_title from "suhailmemon84-dev"."cleaned_stats_data" csd
+# inner join  "suhailmemon84-dev"."cleaned_stats_reference_data" csrd
+# on csd.category_id=csrd.id limit 10 ;
