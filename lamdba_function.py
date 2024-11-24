@@ -92,3 +92,4 @@ def lambda_handler(event, context):
 # select csd.title, csd.channel_title, csrd.snippet_title from "suhailmemon84-dev"."cleaned_stats_data" csd
 # inner join  "suhailmemon84-dev"."cleaned_stats_reference_data" csrd
 # on csd.category_id=csrd.id limit 10 ;
+#
