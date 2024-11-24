@@ -39,3 +39,4 @@ job.commit()
 # so that's the reason why i added the code: push_down_predicate="region in('ca','gb','us')" in line 26 to make sure that aws only processes the canada, great britain and us files only because those files do not contain any special characters
 # once that code was added, the subsequent run succeeded. you can verify by seeing the parquet files at: s3://suhailmemon84-youtube-de-project-cleaned/youtube/cleaned_stats_data/
 # as well as the new catalog table that got created: "suhailmemon84-dev"."cleaned_stats_data". you can run a select over this table in athena to verify you get data back.
+# i also added: partitionKeys=["region"] on line 32 where i'm configuring the sink to make sure my target glue table is partitioned on region
