@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="rKWOCj_qRsjf3k0365LO">
+    <mxGraphModel dx="1242" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-1" target="Pk9qYFChc7ISO-DQyLWY-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-1" value="Youtube raw stats files(csv)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-2" target="Pk9qYFChc7ISO-DQyLWY-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-2" value="Youtube raw stats reference files(json)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="30" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-3" target="Pk9qYFChc7ISO-DQyLWY-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-3" target="Pk9qYFChc7ISO-DQyLWY-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-3" value="AWS S3 RAW BUCKET" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="220" y="180" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-7" target="Pk9qYFChc7ISO-DQyLWY-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-7" value="LAMBDA FUNCTION (transform the reference files and convert from json to parquet)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="380" y="160" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-9" target="Pk9qYFChc7ISO-DQyLWY-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-9" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;AWS GLUE TABLE:&amp;nbsp;&lt;span style=&quot;color: rgb(15, 20, 26); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;cleaned_stats_reference_data&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;span style=&quot;color: rgb(15, 20, 26); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;S3: AWS S3 CLEANED Bucket&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="580" y="135" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-12" target="Pk9qYFChc7ISO-DQyLWY-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-12" value="AWS GLUE CRAWLER (crawl the raw stats csv files)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="220" y="340" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-14" target="Pk9qYFChc7ISO-DQyLWY-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-14" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;AWS GLUE TABLE:&amp;nbsp;&lt;span style=&quot;color: rgb(15, 20, 26); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;raw_statistics_data&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="190" y="500" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-16" value="&lt;font size=&quot;1&quot;&gt;AWS GLU ETL JOB (datatype transformations)&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="410" y="525" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-20" target="Pk9qYFChc7ISO-DQyLWY-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-20" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;AWS GLUE TABLE:&amp;nbsp;&lt;span style=&quot;color: rgb(15, 20, 26); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;cleaned_stats_data&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;span style=&quot;color: rgb(15, 20, 26); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;S3: AWS S3 CLEANED Bucket&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="590" y="485" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1145" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-21" value="&lt;font size=&quot;1&quot;&gt;AWS GLUE ETL JOB (join these two tables)&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="945" y="340" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Pk9qYFChc7ISO-DQyLWY-29" target="Pk9qYFChc7ISO-DQyLWY-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-29" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;AWS GLUE TABLE:&amp;nbsp;&lt;span style=&quot;color: rgb(15, 20, 26); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;final_analytics&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;span style=&quot;color: rgb(15, 20, 26); font-family: &amp;quot;Amazon Ember&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Roboto, Arial, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;S3: AWS S3 ANALYTICS Bucket&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="315" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="Pk9qYFChc7ISO-DQyLWY-30" value="&lt;font size=&quot;1&quot;&gt;USER REPORTING VIA AWS QLIKSIGHT&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="315" width="170" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
