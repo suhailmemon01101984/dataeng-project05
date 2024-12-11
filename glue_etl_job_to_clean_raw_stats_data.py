@@ -5,7 +5,7 @@
 # finally on the target s3 bucket, i made the format as parquet, compression snappy, s3 target location as: s3://suhailmemon84-youtube-de-project-cleaned/youtube/cleaned_stats_data/
 # also chose the option: "create a table in the data catalog and on subsequent runs...keep existing schema...."
 # chose database as suhailmemon84-dev and table as: cleaned_stats_data
-
+#just a new comment
 # then saved the visual etl job and then edited the script to add the code: push_down_predicate="region in('ca','gb','us')" on line 26. it wouldn't let me add this filter in visual etl mode so had to modify the script directly
 
 import sys
